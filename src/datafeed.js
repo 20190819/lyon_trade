@@ -12,26 +12,24 @@ const lastBarsCache = new Map();
 
 // DatafeedConfiguration implementation
 const configurationData = {
-	// Represents the resolutions for bars supported by your datafeed
-	supported_resolutions: ['1D', '1W', '1M'],
+	// 支持的时间周期配置
+	supported_resolutions: ['1','2','3', '5', '15', '30', '60', '240', '1D', '1W', '1M'],
 
-	// The `exchanges` arguments are used for the `searchSymbols` method if a user selects the exchange
+	// 交易所配置
 	exchanges: [{
 		value: 'Bitfinex',
 		name: 'Bitfinex',
-		desc: 'Bitfinex',
+		desc: 'Bitfinex 交易所',
 	},
 	{
 		value: 'Kraken',
-		// Filter name
 		name: 'Kraken',
-		// Full exchange name displayed in the filter popup
-		desc: 'Kraken bitcoin exchange',
+		desc: 'Kraken 比特币交易所',
 	},
 	],
-	// The `symbols_types` arguments are used for the `searchSymbols` method if a user selects this symbol type
+	// 交易品种类型
 	symbols_types: [{
-		name: 'crypto',
+		name: '加密货币',
 		value: 'crypto',
 	},
 	],
